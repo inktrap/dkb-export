@@ -57,10 +57,11 @@ well) audited and maintained, therefore trustable tools.
 
 ## Setup
 
-An overview of the financial data tools:
+An overview of the financial data tools and their function:
 
- - ``[dkbweb] and [dkb-visa] --pull/export--> data (qif) --import--> data in [gnucash]``
- - ``[autobudget] --budget--> budgeted data in [gnucash]``
+ - from desktop ``[dkbweb] and [dkb-visa] --pull/export--> data (qif) --import--> in [gnucash]``
+ - from mobile ``[GnuCashApp] --pull/export--> data --import/fiximport --> in [gnucash]``
+ - budgeting ``[autobudget] --budget--> budgeted data in [gnucash]``
  - financial analysis with gnucash
 
 
@@ -69,6 +70,8 @@ a wrapper that acts as a controller):
 
  - call dkb*-scripts
  - ask for the password
+ - export data from mobile
+ - import data from mobile and files
  - call autobudget
  - call gnucash
  - for all steps: check/report output/results
@@ -80,4 +83,8 @@ or ``runwhen``:
  - I would like direct feedback if something goes wrong.
  - I won't include my password in a script in cleartext.
  - I don't need regular checks, only if I start GnuCash.
+
+It would be nice to use the [Python
+Bindings](https://wiki.gnucash.org/wiki/Python_Bindings) (see ``hjacobs``) and
+develop a standalone script.
 
