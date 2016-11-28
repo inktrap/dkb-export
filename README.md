@@ -9,7 +9,7 @@ products, instead I will use the tools published here and GnuCash.
 
  - test and audit the tools individually
  - write a wrapper as detailed below (see: Setup)
- - have a nicer and neater gnucash, see [customizing gtk apps] and ``gtk``
+ - have a nicer and neater gnucash, see ``gtk``
 
 
 ## Overview
@@ -34,10 +34,12 @@ These are:
  starting-out and not merged to master. But hey, there are tests, soo, I'll
  see if I am going to fork it.
 
- - ``gtk`` contains a custom GnuCash stylesheet. Theming GTK+ applications is
- a whole new topic by itself, see: Maybe [change the gtk
+ - ``gtk`` contains a custom GnuCash stylesheet [from
+ here](https://github.com/Gnucash/gnucash/blob/master/doc/gtkrc-2.0.gnucash).
+ Theming GTK+ applications is a whole new topic by itself. Maybe [change the
+ gtk
  theme](https://wiki.archlinux.org/index.php/GTK%2B#Basic_theme_configuration)
- or [tweak a theme with
+ or [tweak the theme with
  css](https://blogs.gnome.org/mclasen/2014/05/06/tweaking-a-the-gtk-theme-using-css/)
  with the help of [gtkparasite](https://github.com/chipx86/gtkparasite)?
 
