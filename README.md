@@ -20,7 +20,9 @@ to interact with DKB and to manage my money. These are:
  - ``gnucash_autobudget``  is a python script that creates GnuCash entries
  according to an [envelope
  system](https://en.wikipedia.org/wiki/Envelope_system). Currently it is not
- working, but maybe I'll have a look at it.
+ working, but maybe I'll have a look at it. Strange that the branch is named
+ starting-out and not merged to master. But hey, there are tests, soo, I'll
+ see if I am going to fork it.
 
 
 ## Rationale
@@ -38,8 +40,8 @@ well) audited and maintained, therefore trustable tools.
 
 An overview of the financial data tools:
 
- - [dkbweb] and [dkb-visa] --pull/export--> data (qif) --import--> data in [gnucash]
- - [autobudget] --budget--> budgeted data in [gnucash]
+ - ``[dkbweb] and [dkb-visa] --pull/export--> data (qif) --import--> data in [gnucash]``
+ - ``[autobudget] --budget--> budgeted data in [gnucash]``
  - financial analysis with gnucash
 
 

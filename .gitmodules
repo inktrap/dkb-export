@@ -4,3 +4,6 @@
 [submodule "dkbweb"]
 	path = dkbweb
 	url = git@github.com:inktrap/dkbweb.git
+[submodule "gnucash_autobudget"]
+	path = gnucash_autobudget
+	url = https://github.com/rmoehn/gnucash_autobudget.git
