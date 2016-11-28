@@ -1,3 +1,10 @@
+# My nerdy and open source approach on financial data management without reinventing the wheel
+
+My goal is to track and manage my finances as automated as possible using an
+envelope system. I won't use external servers or companies or closed source
+products, instead I will use the tools published here and GnuCash.
+
+
 ## TODO
 
  - test and audit the tools individually
