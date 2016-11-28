@@ -54,3 +54,19 @@ well) audited and maintained, therefore trustable tools.
 An overview of the financial data tools and their function can be found
 [here](https://blog.inktrap.org/managing-my-finances-with-free-and-open-source-tools.html).
 
+### Wrapper
+
+The wrapper has to do the following things:
+
+ - call dkb*-scripts
+ - ask for the password
+ - export data from mobile
+ - import data from mobile and files
+ - call autobudget
+ - call gnucash
+ - for all steps: check/report output/results
+
+It would be nice to use the [Python
+Bindings](https://wiki.gnucash.org/wiki/Python_Bindings) (see ``hjacobs``) and
+develop a standalone script tested script.
+
