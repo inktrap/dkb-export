@@ -6,8 +6,10 @@
 
 ## Overview
 
-This repository has the purpose to track several tools that I use
-to interact with DKB and to manage my money. These are:
+This repository has the purpose to track several tools that I use to interact
+with DKB and to [manage my
+money](https://martin.kleppmann.com/2011/03/07/accounting-for-computer-scientists.html).
+These are:
 
  - ``dkbweb`` which is used to get info from my banking account. The project
  has quite some history: it was written a long time ago, then abandoned, then
