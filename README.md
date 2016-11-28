@@ -1,9 +1,3 @@
-# My nerdy and open source approach on financial data management without reinventing the wheel
-
-My goal is to track and manage my finances as automated as possible using an
-envelope system. I won't use external servers or companies or closed source
-products, instead I will use the tools published here and GnuCash.
-
 
 ## TODO
 
@@ -57,34 +51,6 @@ well) audited and maintained, therefore trustable tools.
 
 ## Setup
 
-An overview of the financial data tools and their function:
-
- - from desktop ``[dkbweb] and [dkb-visa] --pull/export--> data (qif) --import--> in [gnucash]``
- - from mobile ``[GnuCashApp] --pull/export--> data --import/fiximport --> in [gnucash]``
- - budgeting ``[autobudget] --budget--> budgeted data in [gnucash]``
- - financial analysis with gnucash
-
-
-The ``--import-->`` step should be performed if GnuCash is started (write
-a wrapper that acts as a controller):
-
- - call dkb*-scripts
- - ask for the password
- - export data from mobile
- - import data from mobile and files
- - call autobudget
- - call gnucash
- - for all steps: check/report output/results
-
-
-I don't feel comfortable to automate this with ``daemontools`` or ``(ana)cron``
-or ``runwhen``:
-
- - I would like direct feedback if something goes wrong.
- - I won't include my password in a script in cleartext.
- - I don't need regular checks, only if I start GnuCash.
-
-It would be nice to use the [Python
-Bindings](https://wiki.gnucash.org/wiki/Python_Bindings) (see ``hjacobs``) and
-develop a standalone script.
+An overview of the financial data tools and their function can be found
+[here](https://blog.inktrap.org/managing-my-finances-with-free-and-open-source-tools.html).
 
