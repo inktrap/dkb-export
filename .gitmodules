@@ -1,0 +1,6 @@
+[submodule "dkb-visa"]
+	path = dkb-visa
+	url = https://github.com/hoffie/dkb-visa.git
+[submodule "dkbweb"]
+	path = dkbweb
+	url = git@github.com:inktrap/dkbweb.git
