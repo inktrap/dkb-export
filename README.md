@@ -13,13 +13,60 @@ with DKB and to [manage my
 money](https://martin.kleppmann.com/2011/03/07/accounting-for-computer-scientists.html).
 These are:
 
- - ``dkbweb`` which is used to get info from my banking account. The project
- has quite some history: it was written a long time ago, then abandoned, then
- automatically exported from google code (multiple times) and then forked by
- me.
+## Dkbweb
 
- - ``dkb-visa`` from hoffie is quite nice and works -- no need to fork it and
- I trust him to keep his version up to date.
+``dkbweb`` which is used to get info from my banking account. The project
+has quite some history: it was written a long time ago, then abandoned, then
+automatically exported from google code (multiple times) and then forked by
+me. Requirements: ``dkb.py``. DONE: ``dkbweb`` works again(?)/finally!
+
+ - scraping the site works again
+ - it produces **semantically correct** qif files and the fields are interpreted correctly
+ - it produces **syntactically correct** qif files, it skips "Abschluss" statements.
+
+However, the ``dkbweb`` TODOs, ``dkbweb``:
+
+   - should in additional sanitize HTML. This is also true for ``dkb-visa``.
+
+   - still duplicates code from dkb-visa (to retrieve data, there are only
+   some identifiers to change and one regex). Maybe it would be best to fix
+   ``dkbweb`` and then change ``dkb-visa``.
+
+   - should be tested, like ``dkb-visa``
+
+## Dkbvisa
+
+``dkb-visa`` from hoffie is quite nice and works -- no need to fork it and
+I trust him to keep his version up to date. Runs on ``Python 2.7``.
+Requirements: ``mechanize, beautifulsoup4``. Handling of duplicates should be
+done by the application used for money management (which they do quite
+reliably).
+
+The ``dkb-visa`` TODOs:
+
+ - should accept a pin number from commandline.
+ - maybe pull changes from fixing dkbweb. Or create another class for that.
+ - cleanup: have a generic formatting method (many of the methods do the same thing now)
+ - probably incorporate ``dkbweb`` and related: split the scraping code from the qif/csv generation code
+ - ``xrange`` is undefined (but it works?)
+ - i get various style/formatting warnings
+
+
+## Rationale
+
+Currently I am including the projects as subrepositories from their authors
+(hoping that they will fix bugs and develop new features). If a project is
+abandoned I am including my fork (forked with the intention to maintain it) as
+a subrepository.
+
+That way I can audit the tools and check the changes, which leads to (hopfully
+well) audited and maintained, therefore trustable tools.
+
+The new idea is to just pull the data with the scripts and simply use homebank
+for deduplication and budgeting.
+
+
+# Defunct/Irrelevant (personal opinion)
 
  - ``gnucash_autobudget``  is a python script that creates GnuCash entries
  according to an [envelope
@@ -36,17 +83,6 @@ These are:
  or [tweak the theme with
  css](https://blogs.gnome.org/mclasen/2014/05/06/tweaking-a-the-gtk-theme-using-css/)
  with the help of [gtkparasite](https://github.com/chipx86/gtkparasite)?
-
-
-## Rationale
-
-Currently I am including the projects as subrepositories from their authors
-(hoping that they will fix bugs and develop new features). If a project is
-abandoned I am including my fork (forked with the intention to maintain it) as
-a subrepository.
-
-That way I can audit the tools and check the changes, which leads to (hopfully
-well) audited and maintained, therefore trustable tools.
 
 
 ## Setup
